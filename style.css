@@ -1,0 +1,85 @@
+/* Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Heading (h1) */
+h1 {
+    text-align: center;
+    color: #222; /* Slightly darker than body text */
+}
+
+/* Containers */
+#tiles-container,
+#dice-result-display,
+#moves-container,
+#message-area {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    min-height: 30px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Tiles */
+#tiles-container .tile {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    margin: 5px;
+    line-height: 40px; /* Vertically center text */
+    text-align: center;
+    font-weight: bold;
+    background-color: #e9e9e9;
+    cursor: pointer; /* For selection, can be adjusted later */
+}
+
+/* Buttons */
+button,
+#roll-dice-btn,
+#submit-move-btn {
+    padding: 10px 15px;
+    margin: 10px 5px; /* Increased margin for better spacing */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em; /* Ensure consistent font size */
+}
+
+button:hover,
+#roll-dice-btn:hover,
+#submit-move-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Moves List (Labels for radio buttons) */
+#moves-container label {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px; /* Add padding for better clickability */
+    border: 1px solid transparent; /* For potential highlighting */
+    border-radius: 3px;
+}
+
+#moves-container label:hover {
+    background-color: #f0f0f0; /* Slight hover effect for labels */
+}
+
+/* Selected move styling (example, can be handled by JS) */
+#moves-container input[type="radio"]:checked + label {
+    background-color: #d0eaff;
+    border-color: #007bff;
+}
